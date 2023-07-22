@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decline</title>
+    <link rel="icon" href="Torch.png" type="Meow" />
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Updated CSS to make the video fill the page */
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Remove the "controls" attribute to remove the video controls -->
+    <video autoplay loop muted>
+      <!-- Add your video source here -->
+      <source src="video.mp4" type="video/mp4" />
+      <!-- Add additional video formats if needed -->
+    </video>
+  </body>
+</html>

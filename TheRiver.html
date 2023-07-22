@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The-River-Game</title>
+    <link rel="icon" href="Torch.png" type="Tikrok" />
+    <style>
+      body {
+  background-color: #660000; 
+  background-position: bottom; /* Display the lower part of the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 105vh;
+  margin: 0;
+}
+
+      .background {
+        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            .overlay, .scare {
+                position: fixed;
+
+                top: 0;
+                left: 0;
+
+                height: 100vh;
+                width: 100vw;
+            }
+
+            p.overlay-title {
+                font-size: 24px;
+                font-weight: 900;
+                color: black;
+                line-height: 1;
+
+                margin-bottom: 16px;
+            }
+
+            .overlay-button {
+                display: inline-flex;
+                align-items: center;
+
+                height: 40px;
+
+                padding-right: 24px;
+                padding-left: 24px;
+
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1;
+
+                border-radius: 4px;
+
+                margin: 4px;
+
+                cursor: pointer;
+            }
+
+            .overlay-buttons-wrapper {
+                margin: 24px -8px -8px;
+            }
+
+            #accept-button {
+                background-color: rgb(132, 94, 194);
+
+                color: white;
+            }
+
+            #decline-button {
+                color: rgb(132, 94, 194);
+
+                border: 2px solid rgb(132, 94, 194);
+            }
+
+            p.overlay-description {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 1.25;
+
+                margin-bottom: 16px;
+            }
+
+            a.overlay-link {
+                display: inline-block;
+
+                text-decoration: none;
+
+                font-size: 16px;
+                font-weight: 500;
+                color: rgb(132, 94, 194);
+                line-height: 1;
+
+                position: relative;
+
+                margin-top: 16px;
+            }
+
+            a.overlay-link::before {
+                position: absolute;
+
+                content: "";
+
+                height: calc(50% + 4px);
+                width: calc(100% + 8px);
+
+                bottom: -4px;
+                left: -4px;
+
+                background-color: rgba(132, 94, 194, 0.1);
+            }
+
+            .overlay-body {
+                max-width: 512px;
+
+                text-align: center;
+
+                font-family: "Inter", sans-serif;
+            }
+
+            .overlay[hidden] {
+                display: none;
+            }
+
+            .overlay {
+                z-index: 2;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #f5f6fa;
+
+                padding-right: 24px;
+                padding-left: 24px;
+            }
+
+            .scare {
+                z-index: 1;
+            }
+
+            video#video {
+                height: 100%;
+                width: 100%;
+
+                object-fit: cover;
+            }
+
+            video#video::-webkit-media-controls-enclosure {
+                display:none !important;
+            }
+        </style>
+    </style>
+  </head>
+  <body>
+    <div class="overlay-body">
+        <p class="overlay-title">Cookies and user-generated content</p>
+        <p class="overlay-description">This haunted website uses cookies to relentlessly track you and unravel your deepest fears. 
+            Prepare to confront your darkest nightmares as you traverse through these cursed pages.</p>
+        <p class="overlay-description">The malevolent spirits of the web will use cookies to trap your soul within this cursed game.</p>
+        <div class="overlay-buttons-wrapper">
+            <a href="Accept.html">
+                <div id="accept-button" class="overlay-button">Accept</div>
+            </a>
+            <!-- The decline button with an ominous glow -->
+            <a href="Decline.html">
+                <div id="decline-button" class="overlay-button">Decline</div>
+            </a>
+        </div>
+</body>
+
+      <a href="Accept.html" class="overlay-link">Privacy policy</a>
+    </div>
+  </body>
+</html>
